@@ -1,0 +1,89 @@
+﻿@model IEnumerable<checadorPrecios.Models.Productos>
+
+@{
+    ViewData["Title"] = "Productos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Productos</h2>
+<!--
+    <div id='wrapper'>
+    <form id="frm-buscar" name="frm-buscar" action="~/Productos/Index" method="post">
+        <p class='field  half'>
+            <label class='label' for='name'>Nombre del Producto:</label><br />
+            <input name="SearchString" id="SearchString" type="text" class="form-control" />
+        </p>
+        <p class='field  half'>
+            <label class='label' for='codigo'>Codigo:</label><br />
+            <input class='text-input' id='Codigo' name='codigo' type='text'>
+        </p>
+        <p class='field'>
+            <label class='label' for='description'>Descripción:</label><br />
+            <textarea class='textarea' cols='50' id='Description' name='description' rows='4'></textarea>
+        </p>
+        <p class='field'>
+            <label class='label' for='precio'>Precio:</label><br />
+            <input class='text-input' id='Precio' name='precio' type='text'>
+        </p>
+        <p class='field'>
+            <input class='button' type='submit' value='Buscar'>
+        </p>
+    </form>
+
+</div>-->
+<!---->
+<form id="frm-buscar" name="frm-buscar" action="~/Productos/Productos" method="post">
+    <div class="panel panel-default">
+        <div class="panel-heading">Buscar producto</div>
+        <div class="panel-body">
+            <div class="form-inline">
+                <label>Nombre del producto:</label>
+                <input name="SearchString" id="SearchString" type="text" class="form-control" />
+                <button type="submit" class="btn btn-primary">Buscar</button>
+
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.NombreProducto)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Precio)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Categoria)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    </td>
+</tr>
+}
+    </tbody>
+</table>

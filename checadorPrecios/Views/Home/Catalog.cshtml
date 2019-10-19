@@ -34,12 +34,41 @@
     <script src="~/lib/jquery-steps/jquery.steps.js"></script>
     <script src="~/lib/jquery-steps/jquery.cookie-1.3.1.js"></script>
     <!---->
+    <link rel="stylesheet" href="~/css/styleCatalogo.css"/>
 </head>
 <body>
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Checador de Precios</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
 
+                    <!--Agregadas-->
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Catalog">Catalogo</a>
+                    </li>
+
+                    <li><a asp-area="" asp-controller="Productos" asp-action="Productos">Productos</a></li>
+                    <!---->
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contacto</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
     <div class="content">
-        <h1>CATALOGO</h1>
-        <script>
+        <br/>
+         <script>
             $(function () {
                 $("#wizard").steps({
                     headerTag: "h2",
@@ -52,14 +81,276 @@
             <h2>CREMERIA</h2>
             <section>
                 <p>
-
+                    <div class="divC">
+                        <center>
+                            <h3>Leche</h3>
+                            <img src="~/images/leche.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Leche Alpura de un Litro.<br />
+                            Precio:<br />
+                            $20.00 m/n.<br />
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <h3>Yogurt</h3>
+                            <img src="~/images/yogurt.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Yogurt de 125grs.<br />
+                            Precio:<br />
+                            $8.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3>Yogur Alpura bebible </h3>
+                            <img src="~/images/alpuraBebible.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Yogurt Alpura bebible 200ml <br />
+                            Precio:<br />
+                            $ 9.00 <br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Crema de 1/4 </h3>
+                            <img src="~/images/cremaCuarto.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Crema Alpura de 1/4<br />
+                            Precio:<br />
+                            $ 13.00 <br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3> Crema de 1/2 </h3>
+                            <img src="~/images/cremaMedio.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Crema Alpura de 1/2<br />
+                            Precio:<br />
+                            $ 27.00 <br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Queso Doble crema </h3>
+                            <img src="~/images/dobleCrema.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Queso chilchota doble crema<br />
+                            Precio:<br />
+                            $ 100.00 1kg . <br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3> Huevo</h3>
+                            <img src="~/images/huevo.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Huevo San Juan<br />
+                            Precio:<br />
+                            $ 34.00 1kg. <br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3> Jamon </h3>
+                            <img src="~/images/jamon.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Jamon Fud Viena<br />
+                            Precio:<br />
+                            $ 100.00 1kg <br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3>Mantequilla </h3>
+                            <img src="~/images/mantequilla.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Mantequilla iberia de 225g<br />
+                            Precio:<br />
+                            $ 11.00 <br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Queso Panela </h3>
+                            <img src="~/images/panela.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Queso tipo panela marva La Villa<br />
+                            Precio:<br />
+                            $ 120.00 <br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3>Queso Blanco</h3>
+                            <img src="~/images/quesoBlanco.png" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Queso blancp marca chilchota.<br />
+                            Precio:<br />
+                            $ 120.00 <br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3> Salchicha pavo.</h3>
+                            <img src="~/images/salchichaPavo.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Salchicha fud de pavo, paquete con 8pz<br />
+                            Precio:<br />
+                            $ 18.00 <br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3>Salchicha  </h3>
+                            <img src="~/images/salchichaSuelta.jpg" width="300" height="300" /><br />
+                            Descripción:<br />
+                            Salchicha fud paquete 5kg<br />
+                            Precio:<br />
+                            $ 250.00 <br />
+                        </center>
+                    </div>
                 </p>
             </section>
             <h2>ABARROTES</h2>
             <section>
                 <p>
+                    <div class="divC">
+                        <center>
+                            <h3>Aceite</h3>
+                            <img src="~/images/aceite.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Aceite Cristal de un Litro<br />
+                            Precio:<br />
+                            $30.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Atun</h3>
+                            <img src="~/images/atun.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Atun Dolores en agua.<br />
+                            Precio:<br />
+                            $17.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3>Nescafe</h3>
+                            <img src="~/images/nescafe.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Nescafe de frasco 120g.<br />
+                            Precio:<br />
+                            $24.00 m/n.<br />
+                        </center>
+                    </div>
+                    <div>
+                        <center>
+                            <h3>Coca Cola</h3>
+                            <img src="~/images/coca.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Coca Cola desechable de 3 litros.<br />
+                            Precio:<br />
+                            $39.00 m/n.<br />
+                        </center>
+                    </div>
+                    <div class="divC">
+                        <br />
+                        <center>
+                            <h3>Harina de Trigo</h3>
+                            <img src="~/images/harina.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Harina de trigo La Moderna de 1kg.<br />
+                            Precio:<br />
+                            $17.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Papel Higienico</h3>
+                            <img src="~/images/papel.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Rollo de papel higienico Petalo.<br />
+                            Precio:<br />
+                            $10.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3> Pepsi</h3>
+                            <img src="~/images/pepsi.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Refresco Pepsi de lata.<br />
+                            Precio:<br />
+                            $12.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Roma</h3>
+                            <img src="~/images/roma.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Jabon Roma de 1kg.<br />
+                            Precio:<br />
+                            $38.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3>Sabritas</h3>
+                            <img src="~/images/sabritas.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Sabritas Original de 70grs.<br />
+                            Precio:<br />
+                            $12.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Shampoo</h3>
+                            <img src="~/images/shampoo.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Shampoo Hedan Shoulders de 500ml.<br />
+                            Precio:<br />
+                            $50.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div class="divC">
+                        <center>
+                            <h3>Takis</h3>
+                            <img src="~/images/takis.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Takis fuego de 60grs.<br />
+                            Precio:<br />
+                            $11.00 m/n.<br />
+                        </center>
+                    </div><br />
+                    <div>
+                        <center>
+                            <h3>Toallas Sanitarias</h3>
+                            <img src="~/images/toallas.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Toallas Sanitarias Saba Nocturnas.<br />
+                            Precio:<br />
+                            $25.00 m/n.<br />
+                        </center>
+                    </div><br />
+
+                    <div>
+                        <center>
+                            <h3>Zote</h3>
+                            <img src="~/images/zote.jpg" width="300" height="300"><br />
+                            Descripcion:<br />
+                            Jabon Zote rosa de 400g.<br />
+                            Precio:<br />
+                            $15.00 m/n.<br />
+                        </center>
+                    </div><br />
 
                 </p>
+
             </section>
             <h2>SEMILLAS </h2>
             <section>
@@ -80,10 +371,10 @@
             </section>
         </div>
     </div>
-   
+
 
     <div class="container body-content">
-       
+
         <hr />
         <footer>
             <p>&copy; 2019 - Checador de Precios</p>
@@ -91,12 +382,12 @@
     </div>
 
     <environment include="Development">
-       
+
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">
- 
+
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
